@@ -1,28 +1,66 @@
-.aboutme body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: hsla(216, 52%, 45%, 0.808); /* Blue background */
-      color: #ffffff;
-    }
+.home-page {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #0f2027, #2c5364, #00c6ff, #56eb00);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color: white;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-    }
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; } 
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background: #e4e4e4;  
+padding: 10px;
+background: linear-gradient(270deg, #ff6ec4, #7873f5, #101920);
+background-size:400% 400%;
+animation: navMove 8s ease infinite;  
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+ul{
+display:flex;
+list-style:none;
+}
 
-    h2 {
-      margin-top: 30px;
-    }
+li{
+margin:0 10px;
+}
 
-    p {
-      line-height: 1.6;
-    }
-    
+li a{
+text-decoration:none;
+color:white;
+padding:8px 15px;
+background:rgb(207, 230, 5);
+border-radius:2px;
+}
+
+/* Hover effect */
+
+li a:hover{
+background:orange;
+}
+.copy{
+  text-align: center;
+}
+
+.social{
+  text-align: center;
+}
+footer{
+ text-align: center;
+display:flex;
+justify-content:center;   /* horizontal center */
+align-items:center;       /* vertical center */
+height:60px;              /* adjust height */
+} 
+h1{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
