@@ -1,8 +1,8 @@
 .home-page {
     min-height: 100vh;
-    background: linear-gradient(-45deg, #0f2027, #2c5364, #00c6ff, #56eb00);
+ background: linear-gradient(90deg, #df884baf, #6e103e, #00c6ff, #330e38 );
     background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
+    animation: gradientMove 10s ease infinite;   
     color: white;
 }
 
@@ -11,15 +11,16 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-nav{
-display:flex;
-justify-content:space-between;
+ul{
+display:inline-flex;
 align-items:center;
-background: #e4e4e4;  
+background: hsl(133, 90%, 42%);  
 padding: 10px;
 background: linear-gradient(270deg, #ff6ec4, #7873f5, #101920);
 background-size:400% 400%;
 animation: navMove 8s ease infinite;  
+font-size: x-large;
+font-style:oblique;
 }
 
 ul{
@@ -35,7 +36,7 @@ li a{
 text-decoration:none;
 color:white;
 padding:8px 15px;
-background:rgb(207, 230, 5);
+background:rgb(5, 230, 125);
 border-radius:2px;
 }
 
@@ -154,3 +155,51 @@ p{
 .resume-btn:hover {
   background: #0056b3;
 }
+.logo {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00c6ff, #0072ff);
+  background-size: 300%;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 5s infinite linear;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  100% { background-position: 300% }
+}
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+}
+
+/* abstract underline */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6a00, #00c6ff);
+  transition: 0.4s;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+.resume:h1{
+  font-family:monospace;
+  font-style:initial;
+  font-display: auto;\
+  font: weight 400%;
+  color:rgb(196, 151, 94)
