@@ -1,110 +1,151 @@
-<section class="hero">
-    <body style="
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #232526, #414345, #1f4037, #134e5e);
-    background-size: 400% 400%;
-    animation: skillsBG 12s ease infinite;
-    color: white;
-">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Skills</title>
 
-<style>
-@keyframes skillsBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-h1 {
-      text-align: center;
-      color: #444;
-    }
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(-45deg, #232526, #414345, #1f4037, #134e5e);
+        background-size: 400% 400%;
+        animation: skillsBG 12s ease infinite;
+        color: #fff;
+        padding: 20px;
+      }
 
-    h2 {
+      @keyframes skillsBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* ✅ SAME BOX STYLE */
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        color: #333;
+      }
+
+      /* TEXT */
+      h1,
+      h2,
+      h3 {
         text-align: center;
-      color: #ffffff;
-    }
-h3  {
-    text-align: center;
-}
-    p {
+      }
+
+      p {
         text-align: center;
-      line-height: 1.6;
-    }
-    
-</style>
+        line-height: 1.6;
+      }
 
-</body>
-    <div class="hero-content">
-        <h2>My Skills 💡</h2>
-        <p>
-            A combination of technical knowledge, creativity, and continuous learning
-            helps me build efficient and modern web solutions.
-        </p>
-    </div>
-</section>
+      /* CARDS */
+      .card-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-<!-- INTRO -->
-<section class="intro">
-    <h2>What I Bring</h2>
-    <p>
-        I focus on developing strong fundamentals in web development while also
-        improving design sense and problem-solving ability.
-    </p>
-</section>
+      .card {
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 10px;
+        width: 250px;
+      }
 
-<!-- SKILL CARDS -->
-<section class="features">
-    <h2>Core Skills</h2>
+      /* PROGRESS BARS */
+      .skill {
+        margin: 15px 0;
+      }
 
-    <div class="card-container">
+      .bar {
+        background: #ddd;
+        border-radius: 20px;
+        overflow: hidden;
+      }
 
+      .fill {
+        height: 10px;
+        background: #23a6d5;
+      }
+
+      /* Skill Levels */
+      .html {
+        width: 90%;
+      }
+      .css {
+        width: 85%;
+      }
+      .js {
+        width: 70%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>My Skills 💡</h1>
+
+      <p>
+        A combination of technical knowledge, creativity, and continuous
+        learning helps me build efficient web solutions.
+      </p>
+
+      <h2>Core Skills</h2>
+
+      <div class="card-container">
         <div class="card">
-            <h3>🌐 HTML</h3>
-            <p>Strong understanding of semantic structure and page layout design.</p>
+          <h3>🌐 HTML</h3>
+          <p>Strong understanding of structure and layout.</p>
         </div>
 
         <div class="card">
-            <h3>🎨 CSS</h3>
-            <p>Styling websites with modern layouts, animations, and responsiveness.</p>
+          <h3>🎨 CSS</h3>
+          <p>Modern styling, animations, and responsiveness.</p>
         </div>
 
         <div class="card">
-            <h3>⚡ JavaScript</h3>
-            <p>Basic interactivity, DOM manipulation, and dynamic behavior.</p>
+          <h3>⚡ JavaScript</h3>
+          <p>Basic interactivity and DOM manipulation.</p>
         </div>
+      </div>
 
-    </div>
-</section>
+      <h2>Skill Levels</h2>
 
-<!-- PROGRESS BARS -->
-<section class="skills-progress">
-    <h2>Skill Levels</h2>
-
-    <div class="skill">
+      <div class="skill">
         <p>HTML</p>
         <div class="bar"><div class="fill html"></div></div>
-    </div>
+      </div>
 
-    <div class="skill">
+      <div class="skill">
         <p>CSS</p>
         <div class="bar"><div class="fill css"></div></div>
-    </div>
+      </div>
 
-    <div class="skill">
+      <div class="skill">
         <p>JavaScript</p>
         <div class="bar"><div class="fill js"></div></div>
-    </div>
+      </div>
 
-</section>
-
-<!-- EXTRA SKILLS -->
-<section class="vision">
-    <h2>Additional Strengths</h2>
-    <p>
-        ✔ Problem Solving <br>
-        ✔ Creativity in Design <br>
-        ✔ Fast Learning Ability <br>
+      <h2>Additional Strengths</h2>
+      <p>
+        ✔ Problem Solving <br />
+        ✔ Creativity <br />
+        ✔ Fast Learning <br />
         ✔ Attention to Detail
-    </p>
-</section>
+      </p>
+    </div>
+  </body>
+</html>

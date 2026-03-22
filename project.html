@@ -1,118 +1,116 @@
-    <div class="hero-content">
-        <body style="
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #141e30, #243b55, #0f2027, #203a43);
-    background-size: 400% 400%;
-    animation: projectBG 12s ease infinite;
-    color: white;
-">
-<style>
-@keyframes projectBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-h2 {
-    text-align: center;
-    color: #ffffff;
-}
-p {
-    text-align: center;
-    line-height: 1.6;
-}
-h3 {
-    text-align: center;
-}   
-</style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Projects</title>
 
-        <h2>My Projects 🚀</h2>
-        <p>
-            Here are some of the projects I have worked on. These projects reflect 
-            my learning journey, creativity, and ability to build real-world solutions.
-        </p>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(-45deg, #141e30, #243b55, #0f2027, #203a43);
+        background-size: 400% 400%;
+        animation: projectBG 12s ease infinite;
+        margin: 0;
+        padding: 20px;
+        color: #fff;
+      }
+
+      @keyframes projectBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* SAME BOX STYLE */
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        color: #333;
+      }
+
+      /* TEXT */
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      /* CARDS */
+      .card-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card {
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 10px;
+        width: 250px;
+        text-align: center;
+      }
+
+      button {
+        padding: 8px 15px;
+        border: none;
+        background: #23a6d5;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>My Projects 🚀</h1>
+
+      <p>
+        Here are some of the projects I have worked on. These projects reflect
+        my learning journey and creativity.
+      </p>
+
+      <h2>Featured Projects</h2>
+
+      <div class="card-container">
+        <div class="card">
+          <h3>🌐 Portfolio Website</h3>
+          <p>A personal portfolio built using HTML & CSS.</p>
+          <button>View Project</button>
+        </div>
+
+        <div class="card">
+          <h3>🏫 School Website</h3>
+          <p>Clean UI design for a school website.</p>
+          <button>View Project</button>
+        </div>
+
+        <div class="card">
+          <h3>📞 Contact Form</h3>
+          <p>Responsive form with validation.</p>
+          <button>View Project</button>
+        </div>
+      </div>
+
+      <h2>Future Goals</h2>
+      <p>
+        I plan to build dynamic apps using JavaScript and modern frameworks.
+      </p>
     </div>
-</section>
-
-<!-- INTRO -->
-<section class="intro">
-    <h2>What You’ll Find Here</h2>
-    <p>
-        Each project showcases different skills such as design, responsiveness, 
-        and functionality. I continuously improve these projects as I learn new concepts.
-    </p>
-</section>
-
-<!-- PROJECT CARDS -->
-<section class="features">
-    <h2>Featured Projects</h2>
-
-    <div class="card-container">
-
-        <div class="card">
-            <h3>🌐 Portfolio Website</h3>
-            <p>
-                A personal portfolio website designed to showcase my skills, projects, 
-                and achievements. Built using HTML and CSS with a modern layout.
-            </p>
-            <div style="text-align: center;">
-    <button>View Projects</button>
-</div>
-        </div>
-
-        <div class="card">
-            <h3>🏫 School Website Design</h3>
-            <p>
-                Created a professional school advertisement layout and web design 
-                for display purposes. Focused on clean UI and proper content structure.
-            </p>
-           <div style="text-align: center;">
-    <button>View Project    </button>
-</div>
-        </div>
-
-        <div class="card">
-            <h3>📞 Contact Form UI</h3>
-            <p>
-                Designed a responsive contact form with proper input validation 
-                and user-friendly interface.
-            </p>
-            <div style="text-align: center;">
-    <button>View Project</button>
-        </div>
-
-    </div>
-</section>
-
-<!-- PROJECT DETAILS -->
-<section class="projects-details">
-    <h2>Project Highlights</h2>
-
-    <p>
-        ✔ Clean and structured HTML layout <br>
-        ✔ Responsive design using CSS <br>
-        ✔ User-friendly interface <br>
-        ✔ Continuous improvement and updates <br>
-    </p>
-</section>
-
-<!-- FUTURE PROJECTS -->
-<section class="vision">
-    <h2>Future Goals</h2>
-    <p>
-        I am currently working on improving my JavaScript skills and planning 
-        to build dynamic and interactive web applications in the future.
-    </p>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <h2>Interested in My Work?</h2>
-    <p>Feel free to reach out and collaborate with me.</p>
-    <a href="contact.html"></a>
-    <div style="text-align: center;">
-    <button>Contact Me</button>
-</div>
-</body>
-</section>
+  </body>
+</html>
