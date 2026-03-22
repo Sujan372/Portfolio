@@ -69,24 +69,11 @@ p{
 }html, body {
   height: 100%;
   margin: 0;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+} 
 
 .content {
   flex: 1; /* pushes footer down */
   padding: 20px;
-}
-
-.footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
 }
 .projects {
   padding: 50px 20px;
@@ -109,7 +96,7 @@ p{
   background: #0c8cac;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(207, 21, 21, 0.856);
   transition: transform 0.3s;
 }
 
