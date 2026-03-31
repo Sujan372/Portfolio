@@ -75,6 +75,34 @@
 
     <p class="copy">© 2026 Sujan Portfolio</p>
 </footer>
+    <body>
+
+  <!-- your form -->
+
+  <!-- 👇 script must be here -->
+<script>
+
+fetch("http://localhost:5000/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+})
+.then(res => {
+  console.log("Response received");
+  return res.text();
+})
+.then(result => {
+  console.log("Server says:", result);
+  alert(result);   // 👈 THIS SHOWS MESSAGE
+})
+.catch(err => {
+  console.error("Error:", err);
+  alert("Something went wrong");
+});
+</script>
+</body>
 
 </body>     
 </html>~

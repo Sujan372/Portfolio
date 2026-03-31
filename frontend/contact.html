@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <style>
+      /* 🌈 Animated Background */
+      body {
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(
+          -45deg,
+          #261e72,
+          #66ce06,
+          #3db8ec,
+          hsl(327, 96%, 44%)
+        );
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* Animation */
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Heading */
+      h2 {
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+      }
+
+      /* Contact Info Box */
+      .container-contact {
+        max-width: 300px;
+        margin: 20px auto;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        color: #fff;
+      }
+
+      /* Form Styling */
+      form {
+        max-width: 320px;
+        margin: 20px auto;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 25px;
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      /* Inputs */
+      input,
+      textarea {
+        width: 90%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      /* Button */
+      button {
+        background: #ffffff;
+        color: #5401c0;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+
+      /* Hover */
+      button:hover {
+        background: #5401c0;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <div class="container-contact">
+        <p>📧 Email: sujan.angikatechologies@gmail.com</p>
+        <p>📞 Phone: 9972194719</p>
+      </div>
+
+      <form id="form">
+        <input
+          id="name"
+          type="text"
+          placeholder="Your Name"
+          required
+        /><br /><br />
+        <input
+          id="email"
+          type="email"
+          placeholder="Your Email"
+          required
+        /><br /><br />
+
+        <input
+          id="phone"
+          type="text"
+          placeholder="Mobile Number"
+          maxlength="10"
+          required
+          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+        /><br /><br />
+
+        <textarea id="message" placeholder="Message (optional)"></textarea
+        ><br /><br />
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <script>
+      document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const data = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          message: document.getElementById("message").value,
+        };
+
+        console.log("Sending data:", data);
+
+        fetch("http://localhost:5000/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.text())
+          .then((result) => {
+            alert("Message sent successfully!");
+            document.getElementById("form").reset();
+          })
+          .catch((err) => {
+            console.error(err);
+            alert("Error sending message");
+          });
+      });
+    </script>
+  </body>
+</html>
